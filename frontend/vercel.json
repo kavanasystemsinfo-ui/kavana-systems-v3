@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/", "has": [{ "type": "host", "value": "manufacturing.kavanasystems.com" }], "destination": "/welcome/manufacturing/index.html" },
     { "source": "/api/(.*)", "destination": "https://kavana-manufacturing-api.onrender.com/$1" },
     { "source": "/production/(.*)", "destination": "https://kavana-manufacturing-api.onrender.com/production/$1" },
     { "source": "/tenant/(.*)", "destination": "https://kavana-manufacturing-api.onrender.com/tenant/$1" },

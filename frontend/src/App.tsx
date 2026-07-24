@@ -116,6 +116,10 @@ export function App() {
   // Default: show landing page or login
   if (!auth) {
     if (path === '/' || path === '') {
+      // On manufacturing subdomain, show login directly
+      if (window.location.hostname === 'manufacturing.kavanasystems.com') {
+        return <LoginPage onLogin={handleLogin} />;
+      }
       return <LandingPage />;
     }
     return <LoginPage onLogin={handleLogin} />;

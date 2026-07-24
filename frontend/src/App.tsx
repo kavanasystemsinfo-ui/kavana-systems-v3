@@ -117,7 +117,7 @@ export function App() {
   if (!auth) {
     if (path === '/' || path === '') {
       // On manufacturing subdomain, show login directly
-      if (window.location.hostname === 'manufacturing.kavanasystems.com') {
+      if (window.location.hostname === 'www.manufacturing.kavanasystems.com') {
         return <LoginPage onLogin={handleLogin} />;
       }
       return <LandingPage />;
